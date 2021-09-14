@@ -35,22 +35,28 @@ namespace WinFormPostgreSql
         private void btnEkle_Click(object sender, EventArgs e)
         {
             npgsqlConnection.Open();
-            NpgsqlCommand command =
-                new NpgsqlCommand(
-                    "insert into urunler (urunid , urunad, stok , satisfiyat , alisfiyat , gorsel , kategori ) " +
-                    "values (@p1 , @p2 , @p3 , @p4 , @p5 , @p6 , @p7)",
-                    npgsqlConnection);
+            DialogResult dr = new DialogResult();
+            dr = MessageBox.Show("Eklemek istediğinize emin misiniz?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes)
+            {
+                NpgsqlCommand command =
+                    new NpgsqlCommand(
+                        "insert into urunler (urunid , urunad, stok , satisfiyat , alisfiyat , gorsel , kategori ) " +
+                        "values (@p1 , @p2 , @p3 , @p4 , @p5 , @p6 , @p7)",
+                        npgsqlConnection);
 
-            command.Parameters.AddWithValue("@p1", int.Parse(txtUrunId.Text));
-            command.Parameters.AddWithValue("@p2", txtUrunAd.Text);
-            command.Parameters.AddWithValue("@p3", int.Parse(numericUpDown1.Value.ToString()));
-            command.Parameters.AddWithValue("@p4", double.Parse(txtAlisFiyat.Text));
-            command.Parameters.AddWithValue("@p5", double.Parse(txtSatisFiyat.Text));
-            command.Parameters.AddWithValue("@p6", txtGorsel.Text);
-            command.Parameters.AddWithValue("@p7", int.Parse(comboBox1.SelectedValue.ToString()));
-            command.ExecuteNonQuery();
-            npgsqlConnection.Close();
-            MessageBox.Show("Başarılı");
+                command.Parameters.AddWithValue("@p1", int.Parse(txtUrunId.Text));
+                command.Parameters.AddWithValue("@p2", txtUrunAd.Text);
+                command.Parameters.AddWithValue("@p3", int.Parse(numericUpDown1.Value.ToString()));
+                command.Parameters.AddWithValue("@p4", double.Parse(txtAlisFiyat.Text));
+                command.Parameters.AddWithValue("@p5", double.Parse(txtSatisFiyat.Text));
+                command.Parameters.AddWithValue("@p6", txtGorsel.Text);
+                command.Parameters.AddWithValue("@p7", int.Parse(comboBox1.SelectedValue.ToString()));
+                command.ExecuteNonQuery();
+                npgsqlConnection.Close();
+            }
+                
+         
 
         }
 
@@ -64,6 +70,44 @@ namespace WinFormPostgreSql
             comboBox1.ValueMember = "kategoriid";
             comboBox1.DataSource = dt;
             npgsqlConnection.Close();
+        }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            npgsqlConnection.Open();
+            DialogResult dr = new DialogResult();
+            dr = MessageBox.Show("Silmek istediğinize emin misiniz?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes)
+            {
+                NpgsqlCommand commandDelete = new NpgsqlCommand("delete from urunler where urunid=@p1", npgsqlConnection);
+                commandDelete.Parameters.AddWithValue("@p1", int.Parse(txtUrunId.Text));
+                commandDelete.ExecuteNonQuery();
+                
+            }
+            npgsqlConnection.Close();
+
+
+
+
+        }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            npgsqlConnection.Open();
+            DialogResult dr = new DialogResult();
+            dr = MessageBox.Show("Güncellemek istediğinize emin misiniz?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes)
+            {
+                NpgsqlCommand commandUpdate = new NpgsqlCommand("update urunler set urunad=@p1 , stok=@p2 , alisfiyat=@p3 where urunid=@p4", npgsqlConnection);
+                commandUpdate.Parameters.AddWithValue("@p1", txtUrunAd.Text);
+                commandUpdate.Parameters.AddWithValue("@p2", int.Parse(numericUpDown1.Value.ToString()));
+                commandUpdate.Parameters.AddWithValue("@p3", double.Parse(txtAlisFiyat.Text));
+                commandUpdate.Parameters.AddWithValue("@p4", int.Parse(txtUrunId.Text));
+                commandUpdate.ExecuteNonQuery();
+            }
+            
+            npgsqlConnection.Close();
+
         }
     }
 }

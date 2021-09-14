@@ -29,7 +29,6 @@ namespace WinFormPostgreSql
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnAra = new System.Windows.Forms.Button();
             this.btnGuncelle = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
             this.btnEkle = new System.Windows.Forms.Button();
@@ -53,23 +52,15 @@ namespace WinFormPostgreSql
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnAra
-            // 
-            this.btnAra.Location = new System.Drawing.Point(905, 348);
-            this.btnAra.Name = "btnAra";
-            this.btnAra.Size = new System.Drawing.Size(88, 34);
-            this.btnAra.TabIndex = 19;
-            this.btnAra.Text = "Ara";
-            this.btnAra.UseVisualStyleBackColor = true;
-            // 
             // btnGuncelle
             // 
-            this.btnGuncelle.Location = new System.Drawing.Point(806, 348);
+            this.btnGuncelle.Location = new System.Drawing.Point(861, 348);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(93, 34);
             this.btnGuncelle.TabIndex = 18;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // btnSil
             // 
@@ -79,6 +70,7 @@ namespace WinFormPostgreSql
             this.btnSil.TabIndex = 17;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnEkle
             // 
@@ -243,7 +235,6 @@ namespace WinFormPostgreSql
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtAlisFiyat);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.btnAra);
             this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.btnSil);
             this.Controls.Add(this.btnEkle);
@@ -268,8 +259,6 @@ namespace WinFormPostgreSql
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnAra;
         private System.Windows.Forms.Button btnGuncelle;
         private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.Button btnEkle;
