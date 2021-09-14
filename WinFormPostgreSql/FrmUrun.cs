@@ -34,7 +34,24 @@ namespace WinFormPostgreSql
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            
+            npgsqlConnection.Open();
+            NpgsqlCommand command =
+                new NpgsqlCommand(
+                    "insert into urunler (urunid , urunad, stok , satisfiyat , alisfiyat , gorsel , kategori ) " +
+                    "values (@p1 , @p2 , @p3 , @p4 , @p5 , @p6 , @p7)",
+                    npgsqlConnection);
+
+            command.Parameters.AddWithValue("@p1", int.Parse(txtUrunId.Text));
+            command.Parameters.AddWithValue("@p2", txtUrunAd.Text);
+            command.Parameters.AddWithValue("@p3", int.Parse(numericUpDown1.Value.ToString()));
+            command.Parameters.AddWithValue("@p4", double.Parse(txtAlisFiyat.Text));
+            command.Parameters.AddWithValue("@p5", double.Parse(txtSatisFiyat.Text));
+            command.Parameters.AddWithValue("@p6", txtGorsel.Text);
+            command.Parameters.AddWithValue("@p7", int.Parse(comboBox1.SelectedValue.ToString()));
+            command.ExecuteNonQuery();
+            npgsqlConnection.Close();
+            MessageBox.Show("Başarılı");
+
         }
 
         private void FrmUrun_Load(object sender, EventArgs e)
