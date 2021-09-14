@@ -44,6 +44,7 @@ namespace WinFormPostgreSql
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
@@ -75,6 +76,7 @@ namespace WinFormPostgreSql
             this.btnListele.TabIndex = 3;
             this.btnListele.Text = "Listele";
             this.btnListele.UseVisualStyleBackColor = true;
+            this.btnListele.Click += new System.EventHandler(this.btnListele_Click);
             // 
             // label2
             // 
@@ -101,6 +103,7 @@ namespace WinFormPostgreSql
             this.btnEkle.TabIndex = 6;
             this.btnEkle.Text = "Ekle";
             this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // btnSil
             // 
