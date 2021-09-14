@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormPostgreSql", "WinFormPostgreSql\WinFormPostgreSql.csproj", "{300D3B93-9AE5-4357-A467-9B7B453DB21B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostgreSQLEntityFramework", "PostgreSQLEntityFramework\PostgreSQLEntityFramework.csproj", "{FEAD5CE3-9E0E-4910-BF75-A753DA941590}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{300D3B93-9AE5-4357-A467-9B7B453DB21B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{300D3B93-9AE5-4357-A467-9B7B453DB21B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{300D3B93-9AE5-4357-A467-9B7B453DB21B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEAD5CE3-9E0E-4910-BF75-A753DA941590}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEAD5CE3-9E0E-4910-BF75-A753DA941590}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEAD5CE3-9E0E-4910-BF75-A753DA941590}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEAD5CE3-9E0E-4910-BF75-A753DA941590}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
