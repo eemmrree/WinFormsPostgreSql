@@ -33,6 +33,8 @@ namespace WinFormPostgreSql
 
         private void btnListele_Click(object sender, EventArgs e)
         {
+          
+
             string sorgu = "select * from kategori";
             NpgsqlDataAdapter dataAdapter = new NpgsqlDataAdapter(sorgu, npgsqlConnection);
             DataSet dataSet = new DataSet();
