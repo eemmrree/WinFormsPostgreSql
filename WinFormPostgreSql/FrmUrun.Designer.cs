@@ -48,13 +48,14 @@ namespace WinFormPostgreSql
             this.label7 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnView = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnGuncelle
             // 
-            this.btnGuncelle.Location = new System.Drawing.Point(861, 348);
+            this.btnGuncelle.Location = new System.Drawing.Point(809, 348);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(93, 34);
             this.btnGuncelle.TabIndex = 18;
@@ -219,12 +220,23 @@ namespace WinFormPostgreSql
             this.comboBox1.Size = new System.Drawing.Size(199, 21);
             this.comboBox1.TabIndex = 31;
             // 
+            // btnView
+            // 
+            this.btnView.Location = new System.Drawing.Point(926, 348);
+            this.btnView.Name = "btnView";
+            this.btnView.Size = new System.Drawing.Size(93, 34);
+            this.btnView.TabIndex = 32;
+            this.btnView.Text = "View";
+            this.btnView.UseVisualStyleBackColor = true;
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
+            // 
             // FrmUrun
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(1063, 394);
+            this.Controls.Add(this.btnView);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label7);
@@ -278,5 +290,6 @@ namespace WinFormPostgreSql
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btnView;
     }
 }

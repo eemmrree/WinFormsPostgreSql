@@ -109,5 +109,30 @@ namespace WinFormPostgreSql
             npgsqlConnection.Close();
 
         }
+
+        private void btnView_Click(object sender, EventArgs e)
+        {
+            /*
+            PostgreSQL de View oluşturulmasi
+
+            Create View urunListesi
+            As
+            Select urunid,urunad,stok,alisfiyat,satisfiyat,gorsel,kategoriad from urunler inner join kategori
+            on
+            urunler.kategori = kategori.kategoriid 
+
+           */
+
+            npgsqlConnection.Open();
+            NpgsqlCommand commandView = new NpgsqlCommand("select * from urunlistesi" ,npgsqlConnection );
+            NpgsqlDataAdapter da = new NpgsqlDataAdapter(commandView);
+            DataSet dt = new DataSet();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt.Tables[0];
+            npgsqlConnection.Close();
+
+
+
+        }
     }
 }
