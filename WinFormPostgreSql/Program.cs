@@ -16,6 +16,7 @@ namespace WinFormPostgreSql
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new FrmUrun());
             Application.Run(new FrmKategori());
         }
     }
