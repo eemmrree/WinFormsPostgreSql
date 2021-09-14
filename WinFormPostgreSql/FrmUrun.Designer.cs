@@ -259,6 +259,7 @@ namespace WinFormPostgreSql
             this.Name = "FrmUrun";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ürün";
+            this.Load += new System.EventHandler(this.FrmUrun_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);

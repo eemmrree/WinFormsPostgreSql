@@ -36,5 +36,17 @@ namespace WinFormPostgreSql
         {
             
         }
+
+        private void FrmUrun_Load(object sender, EventArgs e)
+        {
+            npgsqlConnection.Open();
+            NpgsqlDataAdapter da = new NpgsqlDataAdapter("select * from kategori", npgsqlConnection);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            comboBox1.DisplayMember = "kategoriad";
+            comboBox1.ValueMember = "kategoriid";
+            comboBox1.DataSource = dt;
+            npgsqlConnection.Close();
+        }
     }
 }
