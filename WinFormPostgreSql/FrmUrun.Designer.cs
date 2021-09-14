@@ -55,7 +55,7 @@ namespace WinFormPostgreSql
             // 
             // btnAra
             // 
-            this.btnAra.Location = new System.Drawing.Point(651, 343);
+            this.btnAra.Location = new System.Drawing.Point(905, 348);
             this.btnAra.Name = "btnAra";
             this.btnAra.Size = new System.Drawing.Size(88, 34);
             this.btnAra.TabIndex = 19;
@@ -64,7 +64,7 @@ namespace WinFormPostgreSql
             // 
             // btnGuncelle
             // 
-            this.btnGuncelle.Location = new System.Drawing.Point(552, 343);
+            this.btnGuncelle.Location = new System.Drawing.Point(806, 348);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(93, 34);
             this.btnGuncelle.TabIndex = 18;
@@ -73,7 +73,7 @@ namespace WinFormPostgreSql
             // 
             // btnSil
             // 
-            this.btnSil.Location = new System.Drawing.Point(703, 293);
+            this.btnSil.Location = new System.Drawing.Point(957, 298);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(90, 34);
             this.btnSil.TabIndex = 17;
@@ -82,17 +82,18 @@ namespace WinFormPostgreSql
             // 
             // btnEkle
             // 
-            this.btnEkle.Location = new System.Drawing.Point(607, 293);
+            this.btnEkle.Location = new System.Drawing.Point(861, 298);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(90, 34);
             this.btnEkle.TabIndex = 16;
             this.btnEkle.Text = "Ekle";
             this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(504, 51);
+            this.label2.Location = new System.Drawing.Point(758, 56);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 13);
             this.label2.TabIndex = 15;
@@ -100,7 +101,7 @@ namespace WinFormPostgreSql
             // 
             // txtUrunAd
             // 
-            this.txtUrunAd.Location = new System.Drawing.Point(589, 48);
+            this.txtUrunAd.Location = new System.Drawing.Point(843, 53);
             this.txtUrunAd.Multiline = true;
             this.txtUrunAd.Name = "txtUrunAd";
             this.txtUrunAd.Size = new System.Drawing.Size(199, 24);
@@ -108,17 +109,18 @@ namespace WinFormPostgreSql
             // 
             // btnListele
             // 
-            this.btnListele.Location = new System.Drawing.Point(506, 293);
+            this.btnListele.Location = new System.Drawing.Point(760, 298);
             this.btnListele.Name = "btnListele";
             this.btnListele.Size = new System.Drawing.Size(95, 34);
             this.btnListele.TabIndex = 13;
             this.btnListele.Text = "Listele";
             this.btnListele.UseVisualStyleBackColor = true;
+            this.btnListele.Click += new System.EventHandler(this.btnListele_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(504, 12);
+            this.label1.Location = new System.Drawing.Point(758, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 12;
@@ -126,7 +128,7 @@ namespace WinFormPostgreSql
             // 
             // txtUrunId
             // 
-            this.txtUrunId.Location = new System.Drawing.Point(589, 9);
+            this.txtUrunId.Location = new System.Drawing.Point(843, 14);
             this.txtUrunId.Multiline = true;
             this.txtUrunId.Name = "txtUrunId";
             this.txtUrunId.Size = new System.Drawing.Size(199, 24);
@@ -137,13 +139,13 @@ namespace WinFormPostgreSql
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(469, 365);
+            this.dataGridView1.Size = new System.Drawing.Size(724, 365);
             this.dataGridView1.TabIndex = 10;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(504, 129);
+            this.label3.Location = new System.Drawing.Point(758, 134);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 13);
             this.label3.TabIndex = 23;
@@ -151,7 +153,7 @@ namespace WinFormPostgreSql
             // 
             // txtAlisFiyat
             // 
-            this.txtAlisFiyat.Location = new System.Drawing.Point(589, 126);
+            this.txtAlisFiyat.Location = new System.Drawing.Point(843, 131);
             this.txtAlisFiyat.Multiline = true;
             this.txtAlisFiyat.Name = "txtAlisFiyat";
             this.txtAlisFiyat.Size = new System.Drawing.Size(199, 24);
@@ -160,7 +162,7 @@ namespace WinFormPostgreSql
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(504, 90);
+            this.label4.Location = new System.Drawing.Point(758, 95);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(32, 13);
             this.label4.TabIndex = 21;
@@ -169,7 +171,7 @@ namespace WinFormPostgreSql
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(504, 211);
+            this.label5.Location = new System.Drawing.Point(758, 216);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(40, 13);
             this.label5.TabIndex = 27;
@@ -177,7 +179,7 @@ namespace WinFormPostgreSql
             // 
             // txtGorsel
             // 
-            this.txtGorsel.Location = new System.Drawing.Point(589, 208);
+            this.txtGorsel.Location = new System.Drawing.Point(843, 213);
             this.txtGorsel.Multiline = true;
             this.txtGorsel.Name = "txtGorsel";
             this.txtGorsel.Size = new System.Drawing.Size(199, 24);
@@ -186,7 +188,7 @@ namespace WinFormPostgreSql
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(504, 169);
+            this.label6.Location = new System.Drawing.Point(758, 174);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(60, 13);
             this.label6.TabIndex = 25;
@@ -194,7 +196,7 @@ namespace WinFormPostgreSql
             // 
             // txtSatisFiyat
             // 
-            this.txtSatisFiyat.Location = new System.Drawing.Point(589, 166);
+            this.txtSatisFiyat.Location = new System.Drawing.Point(843, 171);
             this.txtSatisFiyat.Multiline = true;
             this.txtSatisFiyat.Name = "txtSatisFiyat";
             this.txtSatisFiyat.Size = new System.Drawing.Size(199, 24);
@@ -203,7 +205,7 @@ namespace WinFormPostgreSql
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(504, 250);
+            this.label7.Location = new System.Drawing.Point(758, 255);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(49, 13);
             this.label7.TabIndex = 29;
@@ -211,7 +213,7 @@ namespace WinFormPostgreSql
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(589, 88);
+            this.numericUpDown1.Location = new System.Drawing.Point(843, 93);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(199, 20);
             this.numericUpDown1.TabIndex = 30;
@@ -220,7 +222,7 @@ namespace WinFormPostgreSql
             // 
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(589, 247);
+            this.comboBox1.Location = new System.Drawing.Point(843, 252);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(199, 21);
             this.comboBox1.TabIndex = 31;
@@ -230,7 +232,7 @@ namespace WinFormPostgreSql
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(800, 394);
+            this.ClientSize = new System.Drawing.Size(1063, 394);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label7);
